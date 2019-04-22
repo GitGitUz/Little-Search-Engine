@@ -203,8 +203,6 @@ public class LittleSearchEngine {
 	 *         your code - it is not used elsewhere in the program.
 	 */
 	public ArrayList<Integer> insertLastOccurrence(ArrayList<Occurrence> occs) {
-		// COMPLETE THIS METHOD
-		// THE FOLLOWING LINE HAS BEEN ADDED TO MAKE THE METHOD COMPILE
 		if(occs.size() == 1){
 			return null;
 		}
