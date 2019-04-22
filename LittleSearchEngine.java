@@ -79,7 +79,7 @@ public class LittleSearchEngine {
 	 * @param noiseWordsFile Name of file that has a list of noise words, one noise word per line
 	 * @throws FileNotFoundException If there is a problem locating any of the input files on disk
 	 */
-	public void makeIndex(String docsFile, String noiseWordsFile) 
+	public void makeIndex(String docFile, String noiseWordsFile) 
 	throws FileNotFoundException {
 		// load noise words to hash table
 		Scanner sc = new Scanner(new File(noiseWordsFile));
