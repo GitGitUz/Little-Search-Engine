@@ -263,20 +263,20 @@ public class LittleSearchEngine {
 		ArrayList<Occurrence> results = new ArrayList<Occurrence>(); 
 		ArrayList<String> docs = new ArrayList<String>();
 		
-	if(word1 == null && word2 == null){
-		return null;
-	}
+		if(word1 == null && word2 == null){
+			return null;
+		}
 	
-	if(word1 != null){
-		for(int i = 0; i < word1.size(); i++){
-			results.add(word1.get(i));
+		if(word1 != null){
+			for(int i = 0; i < word1.size(); i++){
+				results.add(word1.get(i));
+			}
 		}
-	}
-	if(word2!=null){
-		for(int i = 0; i < word2.size(); i++){
-			results.add(word2.get(i));
-		}
-	}	
+		if(word2!=null){
+			for(int i = 0; i < word2.size(); i++){
+				results.add(word2.get(i));
+			}
+		}	
 		if(results.size() > 5){
 			for(int i = 6; i < results.size(); i++){
 				results.remove(i);
@@ -299,21 +299,17 @@ public class LittleSearchEngine {
 			}
 			i--;
 		}
-	
 		
-		
-		
-	if(docs.size() > 1){	
-		for(int x = 0; x < docs.size(); x++){
-			for(int j = x+1; j < docs.size(); j++){
-				if(docs.get(x).equals(docs.get(j))){
-					docs.remove(j);
+		if(docs.size() > 1){	
+			for(int x = 0; x < docs.size(); x++){
+				for(int j = x+1; j < docs.size(); j++){
+					if(docs.get(x).equals(docs.get(j))){
+						docs.remove(j);
+					}
 				}
 			}
-		}
-	}	
+		}	
 		return docs;
 	}
-	
 
 }
